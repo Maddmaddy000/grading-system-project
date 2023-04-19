@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ATS and Grading System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/cssfile.css">
+  </head>
+  <body>
+
+    <header class="page">
+      <div class="main">
+          <ul>
+              <li><a href=#>Home</a></li>
+              <li class="active"><a href="#">Fill in the blanks</a></li>
+              <li><a href=# >Questions</a></li>
+          </ul>
+
+      </div>
+      
+      <br><br><br>
+  
+      <p>
+        <div>
+          <label for="exampleFormControlTextarea1">
+            <strong>Fill in the blanks</strong>
+          </label>
+          <textarea readonly
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="10"
+          name="data"> {{body}}</textarea> 
+        </div>
+      </p>
+    
+    
+      <form action="/evaluate" method="post">
+        <div class="form-group">
+          <label for="ans1" style="padding-top: 2em;">
+            <strong>Enter your answer in comma seperated manner:</strong>
+          </label>
+          <br />
+          <textarea 
+            class="form-control"
+            cols = "5"
+            id="tx1"
+            rows="10"
+            name="ansr"
+          ></textarea>
+          <br><br>
+   
+          <button type="submit"  style="float: center;"  class="btn-outline-primary" >Evaluate </button></div>
+        </div>
+      </form>  
+          
+
+    </header>
+  </body>
+</html>

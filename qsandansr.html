@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Question and Answers</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="static/cssfile.css">
+      </head>
+      <body>
+    
+        <header class="page">
+          <div class="main">
+              <ul>
+                  <li><a href="{{url_for('home')}}">Home</a></li>
+                  <li class="active"><a href="{{url_for('index')}}">Fill in the blanks</a></li>
+                  <li><a href="#" >Questions</a></li>
+              </ul>
+    
+          </div>
+    <p>
+    <div>
+        <br><br><br><br><br><br>
+    <label for="exampleFormControlTextarea1">
+      <strong>Question and Answers</strong>
+    </label>
+    <textarea readonly
+    class="form-control"
+    id="exampleFormControlTextarea1"
+    rows="15"
+    name="data"> {{out}} </textarea> 
+  </div>
+
+  </p>
+</header>
+  </body>
+</html>

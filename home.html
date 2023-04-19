@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Your Score</title>
+    <title>Home</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="static/cssfile1.css">
+    <link rel="stylesheet" type="text/css" href="static/cssfile.css">
+
+
   </head>
+    
   <body>
     <script>function onReady(callback) {
       var intervalId = window.setInterval(function() {
@@ -25,43 +28,24 @@
       setVisible('.page', true);
       setVisible('#loading', false);
     });</script>
-
-
-    <header class="page">
+  <header class="page">
       <div class="main">
           <ul>
-              <li><a href="{{url_for('home')}}">Home</a></li>
-              <li class="active"><a href="{{url_for('index')}}">Fill in the blanks</a></li>
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="{{url_for('index')}}">Fill in the blanks</a></li>
               <li><a href="{{url_for('qsgenerate')}}" >Questions</a></li>
           </ul>
 
       </div>
-    <br><br><br><br><br><br>
-    <div>
-    <label for="exampleFormControlTextarea1">
-      <strong>Answers you entered</strong>
-    </label>
-    <textarea
-    class="form-control"
-    id="exampleFormControlTextarea1"
-    rows="10"
-    name="data"> {{v}}  </textarea> 
-  </div>
-  <br>
-  <div>
-  <label for="exampleFormControlTextarea1">
-    <strong>Expected Answers</strong>
-  </label>
-  <textarea
-  class="form-control"
-  id="exampleFormControlTextarea1"
-  rows="10"
-  name="data"> {{a}} </textarea> 
-</div>
-<br>
-<h2 align="center">Your Final score is {{t}}/{{(g)*10}}</h2>
-<h2 align="center">Percentage obtained is {{(t)*10/(g)}}</h2>
-    </header>
-
-</body>
+      <div class="title">
+             <h1><b>What we do?</b></h1>
+             <h4>We are offering a automated text summarizer and question generating system that prepares questions
+              on the basis of requirement as per the user. We offer different varieties of fill in the blanks type 
+              questions and a single type of W/H type question genartion in this system. We also offer a evaluation 
+              system that conduct the evaluation of these questions on user input and returns the user with the score.  
+            </h4>
+      </div>
+  </header>
+  <div id="loading">
+  </body>
 </html>

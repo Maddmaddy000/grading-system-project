@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Generate Question and Answers</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="static/cssfile.css">
+      </head>
+      <body>
+    
+        <header class="page">
+          <div class="main">
+              <ul>
+                  <li><a href="{{url_for('home')}}">Home</a></li>
+                  <li><a href="{{url_for('index')}}">Fill in the blanks</a></li>
+                  <li class="active"><a href="#" >Questions</a></li>
+              </ul>
+    
+          </div>
+
+    <br><br><br><br><br>
+    <form action="/qsandansr" method="post">
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1" style="padding-top: 2em;">
+          <strong>Enter Your Text Below</strong>
+        </label>
+        <br>
+        <textarea
+          class="form-control"
+          id="qstextarea"
+          rows="20"
+          name="dataa"
+        ></textarea>
+      </div>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="submit" class="btn-outline-primary">Genrate Q&A</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label >No: of Questions</label>
+
+      <select name="QS">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+
+        
+      </select> 
+      </form>
+        </header>
+  </body>
+</html>
